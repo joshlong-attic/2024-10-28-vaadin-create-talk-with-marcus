@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Collection;
 import java.util.Map;
 
 @Controller
@@ -52,6 +53,9 @@ class DogAdoptionService {
         });
     }
 
+    Collection<Dog> findAll() {
+        return this.repository.findAll();
+    }
 }
 
 
