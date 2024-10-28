@@ -12,7 +12,9 @@ import com.vaadin.flow.router.Route;
 class AdoptionsView extends VerticalLayout {
 
     AdoptionsView(DogAdoptionService service) {
+        setSizeFull();
         var dogGrid = new Grid<>(Dog.class, false);
+        dogGrid.setSizeFull();
         dogGrid.setItems(service.findAll());
 
         dogGrid.addComponentColumn(dog -> {
